@@ -27,13 +27,13 @@
                         ImageSource="menos.png"/>
 
                 <!-- Contadores adicionais -->
-                <StackLayout Orientation="Horizontal" Spacing="20"
+                <StackLayout Orientation="Horizontal" Spacing="40"
                              AbsoluteLayout.LayoutBounds="0.5,0.2,AutoSize,AutoSize"
                              AbsoluteLayout.LayoutFlags="PositionProportional" HorizontalOptions="Center">
-                    <Label x:Name="Criatura1_J1" Text="0" FontSize="40" TextColor="Yellow"/>
-                    <Label x:Name="Criatura2_J1" Text="0" FontSize="40" TextColor="Yellow"/>
-                    <Label x:Name="Criatura3_J1" Text="0" FontSize="40" TextColor="Yellow"/>
-                    <Label x:Name="Criatura4_J1" Text="0" FontSize="40" TextColor="Yellow"/>
+                    <Label x:Name="Criatura1_J1" Text="0" FontSize="50" TextColor="Yellow"/>
+                    <Label x:Name="Criatura2_J1" Text="0" FontSize="50" TextColor="Yellow"/>
+                    <Label x:Name="Criatura3_J1" Text="0" FontSize="50" TextColor="Yellow"/>
+                    <Label x:Name="Criatura4_J1" Text="0" FontSize="50" TextColor="Yellow"/>
                 </StackLayout>
 
             </AbsoluteLayout>
@@ -60,13 +60,13 @@
                         ImageSource="menos.png"/>
 
                 <!-- Contadores adicionais -->
-                <StackLayout Orientation="Horizontal" Spacing="20"
+                <StackLayout Orientation="Horizontal" Spacing="40"
                              AbsoluteLayout.LayoutBounds="0.5,0.8,AutoSize,AutoSize"
                              AbsoluteLayout.LayoutFlags="PositionProportional" HorizontalOptions="Center">
-                    <Label x:Name="Criatura1_J2" Text="0" FontSize="40" TextColor="Yellow"/>
-                    <Label x:Name="Criatura2_J2" Text="0" FontSize="40" TextColor="Yellow"/>
-                    <Label x:Name="Criatura3_J2" Text="0" FontSize="40" TextColor="Yellow"/>
-                    <Label x:Name="Criatura4_J2" Text="0" FontSize="40" TextColor="Yellow"/>
+                    <Label x:Name="Criatura1_J2" Text="0" FontSize="50" TextColor="Yellow"/>
+                    <Label x:Name="Criatura2_J2" Text="0" FontSize="50" TextColor="Yellow"/>
+                    <Label x:Name="Criatura3_J2" Text="0" FontSize="50" TextColor="Yellow"/>
+                    <Label x:Name="Criatura4_J2" Text="0" FontSize="50" TextColor="Yellow"/>
                 </StackLayout>
 
             </AbsoluteLayout>

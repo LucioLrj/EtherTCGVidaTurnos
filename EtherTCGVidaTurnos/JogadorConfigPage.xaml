@@ -1,0 +1,27 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EtherTCGVidaTurnos.JogadorConfigPage"
+             BackgroundColor="#111"
+             Title="Configurar Jogador">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label x:Name="TituloJogador" FontSize="20" TextColor="White" HorizontalOptions="Center" />
+
+        <Entry x:Name="NomeEntry" Placeholder="Digite o nome do jogador" TextColor="White"/>
+
+        <Label Text="Escolha o Personagem:" FontSize="16" TextColor="White" />
+
+        <Picker x:Name="PersonagemPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Elfo</x:String>
+                    <x:String>Necromante</x:String>
+                    <x:String>Ser Oceânico</x:String>
+                    <x:String>SVampiro</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button Text="Confirmar" Clicked="OnConfirmarClicked" />
+    </VerticalStackLayout>
+</ContentPage>

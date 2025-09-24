@@ -76,4 +76,11 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\Personagens\elfo.jpg" />
+	  <MauiImage Include="Resources\Images\Personagens\necromante.jpg" />
+	  <MauiImage Include="Resources\Images\Personagens\ser_oceanico.jpg" />
+	  <MauiImage Include="Resources\Images\Personagens\vampiro.jpg" />
+	</ItemGroup>
+
 </Project>

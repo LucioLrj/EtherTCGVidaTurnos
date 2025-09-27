@@ -1,4 +1,4 @@
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EtherTCGVidaTurnos.PartidaPage"
              Title="Partida"
@@ -8,32 +8,83 @@
 
         <!-- Jogador 1 - Topo -->
         <Grid Grid.Row="0">
-            <Image Source="necromante.jpg" Aspect="AspectFill" Rotation="180"/>
+            <Image x:Name="PersonagemJogador1" Source="necromante.jpg" Aspect="AspectFill" Rotation="180"/>
             <AbsoluteLayout>
 
+                <!-- Faixa preta translúcida atrás do nome -->
+                <BoxView Color="Black" Opacity="0.4"
+             AbsoluteLayout.LayoutBounds="0,4,1,40"
+             AbsoluteLayout.LayoutFlags="WidthProportional"/>
+
+                <!-- Nome Jogador -->
+                <Label x:Name="NomeJogador1" Text="Jogador 1" FontSize="40" TextColor="White" Rotation="180"
+                       AbsoluteLayout.LayoutBounds="0.5,0.0,AutoSize,AutoSize"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
                 <!-- Contador central -->
-                <Label x:Name="VidaJogador1" Text="20" FontSize="60" TextColor="Yellow" Rotation="180"
+                <Label x:Name="VidaJogador1" Text="20" FontSize="100" TextColor="White" Rotation="180"
                        AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize"
                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                <!-- Botões + / - de vida -->
                 <Button Text="+" Clicked="OnAumentarVida1"
-                        AbsoluteLayout.LayoutBounds="0.7,0.5,60,60"
+                        AbsoluteLayout.LayoutBounds="0.8,0.5,90,90"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         BackgroundColor="Transparent"
                         ImageSource="mais.png"/>
                 <Button Text="-" Clicked="OnDiminuirVida1"
-                        AbsoluteLayout.LayoutBounds="0.3,0.5,60,60"
+                        AbsoluteLayout.LayoutBounds="0.2,0.5,90,90"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         BackgroundColor="Transparent"
                         ImageSource="menos.png"/>
 
-                <!-- Contadores adicionais -->
-                <StackLayout Orientation="Horizontal" Spacing="40"
-                             AbsoluteLayout.LayoutBounds="0.5,0.2,AutoSize,AutoSize"
-                             AbsoluteLayout.LayoutFlags="PositionProportional" HorizontalOptions="Center">
-                    <Label x:Name="Criatura1_J1" Text="0" FontSize="50" TextColor="Yellow"/>
-                    <Label x:Name="Criatura2_J1" Text="0" FontSize="50" TextColor="Yellow"/>
-                    <Label x:Name="Criatura3_J1" Text="0" FontSize="50" TextColor="Yellow"/>
-                    <Label x:Name="Criatura4_J1" Text="0" FontSize="50" TextColor="Yellow"/>
+                <!-- Botão de toggle --><!--
+                <Button x:Name="ToggleContadoresJ1Btn"
+                        Text="▲"
+                        Clicked="OnToggleContadoresJ1Clicked"
+                        FontSize="18"
+                        AbsoluteLayout.LayoutBounds="0.5,0.65,90,40"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>-->
+
+                <!-- Contadores adicionais Jogador 1 -->
+                <StackLayout x:Name="ContadoresJ1" Orientation="Horizontal" Spacing="20"
+             AbsoluteLayout.LayoutBounds="0.5,0.2,AutoSize,AutoSize"
+             AbsoluteLayout.LayoutFlags="PositionProportional"
+             HorizontalOptions="Center" IsVisible="True">
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                        <Label x:Name="Criatura1_J1" Text="00" FontSize="50" TextColor="White" HorizontalTextAlignment="Center" Rotation="180"/>
+                        <StackLayout.GestureRecognizers>
+                            <SwipeGestureRecognizer Direction="Down" Swiped="OnSwipeJ1Up"/>
+                            <SwipeGestureRecognizer Direction="Up" Swiped="OnSwipeJ1Down"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                        <Label x:Name="Criatura2_J1" Text="00" FontSize="50" TextColor="White" HorizontalTextAlignment="Center" Rotation="180"/>
+                        <StackLayout.GestureRecognizers>
+                            <SwipeGestureRecognizer Direction="Down" Swiped="OnSwipeJ1Up"/>
+                            <SwipeGestureRecognizer Direction="Up" Swiped="OnSwipeJ1Down"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                        <Label x:Name="Criatura3_J1" Text="00" FontSize="50" TextColor="White" HorizontalTextAlignment="Center" Rotation="180"/>
+                        <StackLayout.GestureRecognizers>
+                            <SwipeGestureRecognizer Direction="Down" Swiped="OnSwipeJ1Up"/>
+                            <SwipeGestureRecognizer Direction="Up" Swiped="OnSwipeJ1Down"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                        <Label x:Name="Criatura4_J1" Text="00" FontSize="50" TextColor="White" HorizontalTextAlignment="Center" Rotation="180"/>
+                        <StackLayout.GestureRecognizers>
+                            <SwipeGestureRecognizer Direction="Down" Swiped="OnSwipeJ1Up"/>
+                            <SwipeGestureRecognizer Direction="Up" Swiped="OnSwipeJ1Down"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
                 </StackLayout>
 
             </AbsoluteLayout>
@@ -41,32 +92,83 @@
 
         <!-- Jogador 2 - Inferior -->
         <Grid Grid.Row="1">
-            <Image Source="elfo.jpg" Aspect="AspectFill" />
+            <Image x:Name="PersonagemJogador2" Source="elfo.jpg" Aspect="AspectFill" />
             <AbsoluteLayout>
 
+                <!-- Faixa preta translúcida atrás do nome -->
+                <BoxView Color="Black" Opacity="0.4"
+             AbsoluteLayout.LayoutBounds="0,346,1,40"
+             AbsoluteLayout.LayoutFlags="WidthProportional"/>
+
+                <!-- Nome Jogador -->
+                <Label x:Name="NomeJogador2" Text="Jogador 2" FontSize="40" TextColor="White"
+                       AbsoluteLayout.LayoutBounds="0.5,1.0,AutoSize,AutoSize"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
                 <!-- Contador central -->
-                <Label x:Name="VidaJogador2" Text="20" FontSize="60" TextColor="Yellow" 
+                <Label x:Name="VidaJogador2" Text="20" FontSize="100" TextColor="White" 
                        AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize"
                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                <!-- Botões + / - de vida -->
                 <Button Text="+" Clicked="OnAumentarVida2"
-                        AbsoluteLayout.LayoutBounds="0.7,0.5,60,60"
+                        AbsoluteLayout.LayoutBounds="0.8,0.5,90,90"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         BackgroundColor="Transparent"
                         ImageSource="mais.png"/>
                 <Button Text="-" Clicked="OnDiminuirVida2"
-                        AbsoluteLayout.LayoutBounds="0.3,0.5,60,60"
+                        AbsoluteLayout.LayoutBounds="0.2,0.5,90,90"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         BackgroundColor="Transparent"
                         ImageSource="menos.png"/>
 
-                <!-- Contadores adicionais -->
-                <StackLayout Orientation="Horizontal" Spacing="40"
-                             AbsoluteLayout.LayoutBounds="0.5,0.8,AutoSize,AutoSize"
-                             AbsoluteLayout.LayoutFlags="PositionProportional" HorizontalOptions="Center">
-                    <Label x:Name="Criatura1_J2" Text="0" FontSize="50" TextColor="Yellow"/>
-                    <Label x:Name="Criatura2_J2" Text="0" FontSize="50" TextColor="Yellow"/>
-                    <Label x:Name="Criatura3_J2" Text="0" FontSize="50" TextColor="Yellow"/>
-                    <Label x:Name="Criatura4_J2" Text="0" FontSize="50" TextColor="Yellow"/>
+                <!-- Botão de toggle --><!--
+                <Button x:Name="ToggleContadoresJ2Btn"
+                        Text="▼"
+                        Clicked="OnToggleContadoresJ2Clicked"
+                        FontSize="18"
+                        AbsoluteLayout.LayoutBounds="0.5,0.35,40,40"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>-->
+
+                <!-- Contadores adicionais Jogador 2 -->
+                <StackLayout x:Name="ContadoresJ2" Orientation="Horizontal" Spacing="20"
+             AbsoluteLayout.LayoutBounds="0.5,0.8,AutoSize,AutoSize"
+             AbsoluteLayout.LayoutFlags="PositionProportional"
+             HorizontalOptions="Center" IsVisible="True">
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                        <Label x:Name="Criatura1_J2" Text="00" FontSize="50" TextColor="White" HorizontalTextAlignment="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <SwipeGestureRecognizer Direction="Up" Swiped="OnSwipeJ2Up"/>
+                            <SwipeGestureRecognizer Direction="Down" Swiped="OnSwipeJ2Down"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                        <Label x:Name="Criatura2_J2" Text="00" FontSize="50" TextColor="White" HorizontalTextAlignment="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <SwipeGestureRecognizer Direction="Up" Swiped="OnSwipeJ2Up"/>
+                            <SwipeGestureRecognizer Direction="Down" Swiped="OnSwipeJ2Down"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                        <Label x:Name="Criatura3_J2" Text="00" FontSize="50" TextColor="White" HorizontalTextAlignment="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <SwipeGestureRecognizer Direction="Up" Swiped="OnSwipeJ2Up"/>
+                            <SwipeGestureRecognizer Direction="Down" Swiped="OnSwipeJ2Down"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                        <Label x:Name="Criatura4_J2" Text="00" FontSize="50" TextColor="White" HorizontalTextAlignment="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <SwipeGestureRecognizer Direction="Up" Swiped="OnSwipeJ2Up"/>
+                            <SwipeGestureRecognizer Direction="Down" Swiped="OnSwipeJ2Down"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
                 </StackLayout>
 
             </AbsoluteLayout>

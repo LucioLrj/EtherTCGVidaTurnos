@@ -49,7 +49,7 @@
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
 	  <AndroidKeyStore>True</AndroidKeyStore>
 	  <AndroidSigningStorePass>ethercardgame2025</AndroidSigningStorePass>
-	  <AndroidSigningKeyPass>ethercounter</AndroidSigningKeyPass>
+	  <AndroidSigningKeyPass>ethercardgame2025</AndroidSigningKeyPass>
 	  <AndroidSigningKeyAlias>ethercounter</AndroidSigningKeyAlias>
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
 	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
@@ -57,12 +57,13 @@
 	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
 	  <AndroidPackageFormat>apk</AndroidPackageFormat>
 	  <Debugger>Xamarin</Debugger>
+	  <AndroidEnableMultiDex>True</AndroidEnableMultiDex>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|ARM64'">
 	  <AndroidKeyStore>True</AndroidKeyStore>
 	  <AndroidSigningStorePass>ethercardgame2025</AndroidSigningStorePass>
-	  <AndroidSigningKeyPass>ethercounter</AndroidSigningKeyPass>
+	  <AndroidSigningKeyPass>ethercardgame2025</AndroidSigningKeyPass>
 	  <AndroidSigningKeyAlias>ethercounter</AndroidSigningKeyAlias>
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
 	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
@@ -70,6 +71,7 @@
 	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
 	  <AndroidPackageFormat>apk</AndroidPackageFormat>
 	  <Debugger>Xamarin</Debugger>
+	  <AndroidEnableMultiDex>True</AndroidEnableMultiDex>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|AnyCPU'">
@@ -78,11 +80,12 @@
 	  <AndroidUseAapt2>True</AndroidUseAapt2>
 	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
 	  <AndroidSigningStorePass>ethercardgame2025</AndroidSigningStorePass>
-	  <AndroidSigningKeyPass>ethercounter</AndroidSigningKeyPass>
+	  <AndroidSigningKeyPass>ethercardgame2025</AndroidSigningKeyPass>
 	  <AndroidSigningKeyAlias>ethercounter</AndroidSigningKeyAlias>
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
 	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 	  <Debugger>Xamarin</Debugger>
+	  <AndroidEnableMultiDex>True</AndroidEnableMultiDex>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|ARM64'">
@@ -91,11 +94,12 @@
 	  <AndroidUseAapt2>True</AndroidUseAapt2>
 	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
 	  <AndroidSigningStorePass>ethercardgame2025</AndroidSigningStorePass>
-	  <AndroidSigningKeyPass>ethercounter</AndroidSigningKeyPass>
+	  <AndroidSigningKeyPass>ethercardgame2025</AndroidSigningKeyPass>
 	  <AndroidSigningKeyAlias>ethercounter</AndroidSigningKeyAlias>
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
 	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 	  <Debugger>Xamarin</Debugger>
+	  <AndroidEnableMultiDex>True</AndroidEnableMultiDex>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">

@@ -33,15 +33,15 @@ public partial class PartidaPage : ContentPage
             PersonagemJogador2.Source = personagemParaImagem[personagem2];
 
         // Inicializa contadores em 0
-        Criatura1_J1.Text = "00";
-        Criatura2_J1.Text = "00";
-        Criatura3_J1.Text = "00";
-        Criatura4_J1.Text = "00";
+        //Criatura1_J1.Text = "00";
+        //Criatura2_J1.Text = "00";
+        //Criatura3_J1.Text = "00";
+        //Criatura4_J1.Text = "00";
 
-        Criatura1_J2.Text = "00";
-        Criatura2_J2.Text = "00";
-        Criatura3_J2.Text = "00";
-        Criatura4_J2.Text = "00";
+        //Criatura1_J2.Text = "00";
+        //Criatura2_J2.Text = "00";
+        //Criatura3_J2.Text = "00";
+        //Criatura4_J2.Text = "00";
     }
 
     // ===== Vidas =====
@@ -143,18 +143,18 @@ public partial class PartidaPage : ContentPage
         AtualizarVidaJogador2();
     }
 
-    private void OnResetContadoresClicked(object sender, EventArgs e)
-    {
-        Criatura1_J1.Text = "00";
-        Criatura2_J1.Text = "00";
-        Criatura3_J1.Text = "00";
-        Criatura4_J1.Text = "00";
+    //private void OnResetContadoresClicked(object sender, EventArgs e)
+    //{
+    //    Criatura1_J1.Text = "00";
+    //    Criatura2_J1.Text = "00";
+    //    Criatura3_J1.Text = "00";
+    //    Criatura4_J1.Text = "00";
 
-        Criatura1_J2.Text = "00";
-        Criatura2_J2.Text = "00";
-        Criatura3_J2.Text = "00";
-        Criatura4_J2.Text = "00";
-    }
+    //    Criatura1_J2.Text = "00";
+    //    Criatura2_J2.Text = "00";
+    //    Criatura3_J2.Text = "00";
+    //    Criatura4_J2.Text = "00";
+    //}
 
 
 }

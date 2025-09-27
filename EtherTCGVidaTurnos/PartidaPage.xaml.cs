@@ -134,4 +134,27 @@ public partial class PartidaPage : ContentPage
             label.Text = valor.ToString("D2");
         }
     }
+
+    private void OnResetVidaClicked(object sender, EventArgs e)
+    {
+        vida1 = 20;
+        vida2 = 20;
+        AtualizarVidaJogador1();
+        AtualizarVidaJogador2();
+    }
+
+    private void OnResetContadoresClicked(object sender, EventArgs e)
+    {
+        Criatura1_J1.Text = "00";
+        Criatura2_J1.Text = "00";
+        Criatura3_J1.Text = "00";
+        Criatura4_J1.Text = "00";
+
+        Criatura1_J2.Text = "00";
+        Criatura2_J2.Text = "00";
+        Criatura3_J2.Text = "00";
+        Criatura4_J2.Text = "00";
+    }
+
+
 }

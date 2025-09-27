@@ -8,7 +8,7 @@
 
         <!-- Jogador 1 - Topo -->
         <Grid Grid.Row="0">
-            <Image x:Name="PersonagemJogador1" Source="necromante.jpg" Aspect="AspectFill" Rotation="180"/>
+            <Image x:Name="PersonagemJogador1" Source="necromante.jpg" Aspect="AspectFill" Rotation="180" />
             <AbsoluteLayout>
 
                 <!-- Faixa preta translúcida atrás do nome -->
@@ -17,7 +17,7 @@
              AbsoluteLayout.LayoutFlags="WidthProportional"/>
 
                 <!-- Nome Jogador -->
-                <Label x:Name="NomeJogador1" Text="Jogador 1" FontSize="40" TextColor="White" Rotation="180"
+                <Label x:Name="NomeJogador1" Text="Jogador 1" FontSize="40" TextColor="White" Rotation="180" FontAttributes="Bold"
                        AbsoluteLayout.LayoutBounds="0.5,0.0,AutoSize,AutoSize"
                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
@@ -101,7 +101,7 @@
              AbsoluteLayout.LayoutFlags="WidthProportional"/>
 
                 <!-- Nome Jogador -->
-                <Label x:Name="NomeJogador2" Text="Jogador 2" FontSize="40" TextColor="White"
+                <Label x:Name="NomeJogador2" Text="Jogador 2" FontSize="40" TextColor="White" FontAttributes="Bold"
                        AbsoluteLayout.LayoutBounds="0.5,1.0,AutoSize,AutoSize"
                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
@@ -173,6 +173,17 @@
 
             </AbsoluteLayout>
         </Grid>
+        <AbsoluteLayout>
+        <!-- Botões centrais de reset -->
+        <Button Text="Reset Vida" Clicked="OnResetVidaClicked"
+        AbsoluteLayout.LayoutBounds="0,1.1,120,60"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        BackgroundColor="SlateGray" TextColor="Black" FontAttributes="Bold"/>
 
+        <Button Text="Reset Contadores" Clicked="OnResetContadoresClicked"
+        AbsoluteLayout.LayoutBounds="1,1.1,140,60"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        BackgroundColor="SlateGray" TextColor="Black" FontAttributes="Bold"/>
+        </AbsoluteLayout>
     </Grid>
 </ContentPage>

@@ -12,9 +12,9 @@
             <AbsoluteLayout>
 
                 <!-- Faixa preta translúcida atrás do nome -->
-                <BoxView Color="Black" Opacity="0.4"
+                <!--<BoxView Color="Black" Opacity="0.4"
              AbsoluteLayout.LayoutBounds="0,4,1,40"
-             AbsoluteLayout.LayoutFlags="WidthProportional"/>
+             AbsoluteLayout.LayoutFlags="WidthProportional"/>-->
 
                 <!-- Nome Jogador -->
                 <Label x:Name="NomeJogador1" Text="Jogador 1" FontSize="40" TextColor="White" Rotation="180" FontAttributes="Bold"
@@ -37,16 +37,6 @@
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         BackgroundColor="Transparent"
                         ImageSource="menos.png"/>
-
-                <!-- Botão de toggle --><!--
-                <Button x:Name="ToggleContadoresJ1Btn"
-                        Text="▲"
-                        Clicked="OnToggleContadoresJ1Clicked"
-                        FontSize="18"
-                        AbsoluteLayout.LayoutBounds="0.5,0.65,90,40"
-                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                        BackgroundColor="Transparent"
-                        TextColor="White"/>-->
 
                 <!-- Contadores adicionais Jogador 1 -->
                 <StackLayout x:Name="ContadoresJ1" Orientation="Horizontal" Spacing="20"
@@ -96,9 +86,9 @@
             <AbsoluteLayout>
 
                 <!-- Faixa preta translúcida atrás do nome -->
-                <BoxView Color="Black" Opacity="0.4"
+                <!--<BoxView Color="Black" Opacity="0.4"
              AbsoluteLayout.LayoutBounds="0,346,1,40"
-             AbsoluteLayout.LayoutFlags="WidthProportional"/>
+             AbsoluteLayout.LayoutFlags="WidthProportional"/>-->
 
                 <!-- Nome Jogador -->
                 <Label x:Name="NomeJogador2" Text="Jogador 2" FontSize="40" TextColor="White" FontAttributes="Bold"
@@ -121,16 +111,6 @@
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         BackgroundColor="Transparent"
                         ImageSource="menos.png"/>
-
-                <!-- Botão de toggle --><!--
-                <Button x:Name="ToggleContadoresJ2Btn"
-                        Text="▼"
-                        Clicked="OnToggleContadoresJ2Clicked"
-                        FontSize="18"
-                        AbsoluteLayout.LayoutBounds="0.5,0.35,40,40"
-                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                        BackgroundColor="Transparent"
-                        TextColor="White"/>-->
 
                 <!-- Contadores adicionais Jogador 2 -->
                 <StackLayout x:Name="ContadoresJ2" Orientation="Horizontal" Spacing="20"
@@ -174,6 +154,7 @@
             </AbsoluteLayout>
         </Grid>
         <AbsoluteLayout>
+            
         <!-- Botões centrais de reset -->
         <Button Text="Reset Vida" Clicked="OnResetVidaClicked"
         AbsoluteLayout.LayoutBounds="0,1.1,120,60"

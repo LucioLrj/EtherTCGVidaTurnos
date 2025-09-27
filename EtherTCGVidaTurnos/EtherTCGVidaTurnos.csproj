@@ -26,34 +26,50 @@
 		<!-- App Identifier -->
 		<ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
 
+		<packageVersion>1.0.2</packageVersion>
+		<Authors>Lucio Laranjeira</Authors>
+		<Company>Ether Card Game</Company>
+		<Product>Ether Counter</Product>
+		<Description>Contador de vida e turnos para Ether Card Game</Description>
+		
 		<!-- Versions -->
-		<ApplicationDisplayVersion>1.2</ApplicationDisplayVersion>
+		<ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">23.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 		<Platforms>AnyCPU;ARM64</Platforms>
-		<AndroidSigningKeyStore>ethercounter.keystore</AndroidSigningKeyStore>
+		<AndroidSigningKeyStore>ethercounter2.keystore</AndroidSigningKeyStore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
 	  <AndroidKeyStore>True</AndroidKeyStore>
 	  <AndroidSigningStorePass>ethercardgame2025</AndroidSigningStorePass>
-	  <AndroidSigningKeyPass>ethercardgame</AndroidSigningKeyPass>
-	  <AndroidSigningKeyAlias>ethercounterkey</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>ethercounter</AndroidSigningKeyPass>
+	  <AndroidSigningKeyAlias>ethercounter</AndroidSigningKeyAlias>
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <AndroidUseAapt2>True</AndroidUseAapt2>
+	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	  <Debugger>Xamarin</Debugger>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|ARM64'">
 	  <AndroidKeyStore>True</AndroidKeyStore>
 	  <AndroidSigningStorePass>ethercardgame2025</AndroidSigningStorePass>
-	  <AndroidSigningKeyPass>ethercardgame</AndroidSigningKeyPass>
-	  <AndroidSigningKeyAlias>ethercounterkey</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>ethercounter</AndroidSigningKeyPass>
+	  <AndroidSigningKeyAlias>ethercounter</AndroidSigningKeyAlias>
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <AndroidUseAapt2>True</AndroidUseAapt2>
+	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	  <Debugger>Xamarin</Debugger>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|AnyCPU'">
@@ -62,9 +78,11 @@
 	  <AndroidUseAapt2>True</AndroidUseAapt2>
 	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
 	  <AndroidSigningStorePass>ethercardgame2025</AndroidSigningStorePass>
-	  <AndroidSigningKeyPass>ethercardgame</AndroidSigningKeyPass>
-	  <AndroidSigningKeyAlias>ethercounterkey</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>ethercounter</AndroidSigningKeyPass>
+	  <AndroidSigningKeyAlias>ethercounter</AndroidSigningKeyAlias>
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <Debugger>Xamarin</Debugger>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|ARM64'">
@@ -73,57 +91,71 @@
 	  <AndroidUseAapt2>True</AndroidUseAapt2>
 	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
 	  <AndroidSigningStorePass>ethercardgame2025</AndroidSigningStorePass>
-	  <AndroidSigningKeyPass>ethercardgame</AndroidSigningKeyPass>
-	  <AndroidSigningKeyAlias>ethercounterkey</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>ethercounter</AndroidSigningKeyPass>
+	  <AndroidSigningKeyAlias>ethercounter</AndroidSigningKeyAlias>
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <Debugger>Xamarin</Debugger>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-maccatalyst|AnyCPU'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-windows10.0.19041.0|AnyCPU'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|ARM64'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-maccatalyst|ARM64'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-windows10.0.19041.0|ARM64'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-ios|AnyCPU'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-maccatalyst|AnyCPU'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-windows10.0.19041.0|AnyCPU'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-ios|ARM64'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-maccatalyst|ARM64'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-windows10.0.19041.0|ARM64'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
+	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<ItemGroup>

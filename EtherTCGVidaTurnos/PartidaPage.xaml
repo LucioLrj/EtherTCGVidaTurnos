@@ -208,13 +208,13 @@
         <AbsoluteLayout>
             
          <!--Botões centrais de reset--> 
-        <Button Text="Reset Vida" Clicked="OnResetVidaClicked"
-                AbsoluteLayout.LayoutBounds="0.5,1.1,120,60"
+        <Button Clicked="OnResetVidaClicked"
+                AbsoluteLayout.LayoutBounds="0.5,1.1,80,70"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
-                BackgroundColor="SlateGray" TextColor="Black" FontAttributes="Bold"
+                BackgroundColor="Transparent"
                 ImageSource="reiniciar.png"/>
 
-        <!--<Button Text="Reset Turnos" Clicked="OnResetContadoresClicked"
+            <!--<Button Text="Reset Turnos" Clicked="OnResetContadoresClicked"
         AbsoluteLayout.LayoutBounds="1,1.1,140,60"
         AbsoluteLayout.LayoutFlags="PositionProportional"
         BackgroundColor="SlateGray" TextColor="Black" FontAttributes="Bold"/>-->

@@ -26,14 +26,14 @@
 		<!-- App Identifier -->
 		<ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
 
-		<packageVersion>1.0.4</packageVersion>
+		<packageVersion>1.1.0</packageVersion>
 		<Authors>Lucio Laranjeira</Authors>
 		<Company>Ether Card Game</Company>
 		<Product>Ether Counter</Product>
 		<Description>Contador de vida e turnos para Ether Card Game</Description>
 		
 		<!-- Versions -->
-		<ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+		<ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
@@ -52,10 +52,10 @@
 	  <AndroidSigningKeyPass>ethercardgame2025</AndroidSigningKeyPass>
 	  <AndroidSigningKeyAlias>ethercounter</AndroidSigningKeyAlias>
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	  <AndroidUseAapt2>True</AndroidUseAapt2>
 	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
-	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	  <AndroidPackageFormat>aab</AndroidPackageFormat>
 	  <Debugger>Xamarin</Debugger>
 	  <AndroidEnableMultiDex>True</AndroidEnableMultiDex>
 	</PropertyGroup>
@@ -66,100 +66,100 @@
 	  <AndroidSigningKeyPass>ethercardgame2025</AndroidSigningKeyPass>
 	  <AndroidSigningKeyAlias>ethercounter</AndroidSigningKeyAlias>
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	  <AndroidUseAapt2>True</AndroidUseAapt2>
 	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
-	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	  <AndroidPackageFormat>aab</AndroidPackageFormat>
 	  <Debugger>Xamarin</Debugger>
 	  <AndroidEnableMultiDex>True</AndroidEnableMultiDex>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|AnyCPU'">
 	  <AndroidKeyStore>True</AndroidKeyStore>
-	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	  <AndroidPackageFormat>aab</AndroidPackageFormat>
 	  <AndroidUseAapt2>True</AndroidUseAapt2>
 	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
 	  <AndroidSigningStorePass>ethercardgame2025</AndroidSigningStorePass>
 	  <AndroidSigningKeyPass>ethercardgame2025</AndroidSigningKeyPass>
 	  <AndroidSigningKeyAlias>ethercounter</AndroidSigningKeyAlias>
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	  <Debugger>Xamarin</Debugger>
 	  <AndroidEnableMultiDex>True</AndroidEnableMultiDex>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|ARM64'">
 	  <AndroidKeyStore>True</AndroidKeyStore>
-	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	  <AndroidPackageFormat>aab</AndroidPackageFormat>
 	  <AndroidUseAapt2>True</AndroidUseAapt2>
 	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
 	  <AndroidSigningStorePass>ethercardgame2025</AndroidSigningStorePass>
 	  <AndroidSigningKeyPass>ethercardgame2025</AndroidSigningKeyPass>
 	  <AndroidSigningKeyAlias>ethercounter</AndroidSigningKeyAlias>
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	  <Debugger>Xamarin</Debugger>
 	  <AndroidEnableMultiDex>True</AndroidEnableMultiDex>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-maccatalyst|AnyCPU'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-windows10.0.19041.0|AnyCPU'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|ARM64'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-maccatalyst|ARM64'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-windows10.0.19041.0|ARM64'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-ios|AnyCPU'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-maccatalyst|AnyCPU'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-windows10.0.19041.0|AnyCPU'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-ios|ARM64'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-maccatalyst|ARM64'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-windows10.0.19041.0|ARM64'">
 	  <ApplicationId>com.ethercardgame.ethercounter</ApplicationId>
-	  <ApplicationDisplayVersion>1.0.2</ApplicationDisplayVersion>
+	  <ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -201,7 +201,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiImage Include="Resources\Images\Personagens\elfo.jpg" />
+	  <MauiImage Include="Resources\Images\logos\logo1.png" />
+	  <MauiImage Include="Resources\Images\logos\logo2.png" />
+	  <MauiImage Include="Resources\Images\logos\logo3.png" />
+	  <MauiImage Include="Resources\Images\Personagens\fada.jpg" />
 	  <MauiImage Include="Resources\Images\Personagens\necromante.jpg" />
 	  <MauiImage Include="Resources\Images\Personagens\ser_oceanico.jpg" />
 	  <MauiImage Include="Resources\Images\Personagens\vampiro.jpg" />

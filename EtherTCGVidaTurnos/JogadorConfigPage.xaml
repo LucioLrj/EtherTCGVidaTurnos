@@ -14,7 +14,7 @@
         <Picker x:Name="PersonagemPicker" TextColor="White" FontSize="25" SelectedIndexChanged="OnPersonagemChanged">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>Elfo</x:String>
+                    <x:String>Fada</x:String>
                     <x:String>Necromante</x:String>
                     <x:String>Ser Oceânico</x:String>
                     <x:String>Vampiro</x:String>

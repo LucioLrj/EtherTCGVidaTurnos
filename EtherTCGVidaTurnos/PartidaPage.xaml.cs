@@ -10,7 +10,7 @@ public partial class PartidaPage : ContentPage
 
     private readonly Dictionary<string, string> personagemParaImagem = new Dictionary<string, string>()
     {
-        { "Elfo", "elfo.jpg" },
+        { "Fada", "fada.jpg" },
         { "Necromante", "necromante.jpg" },
         { "Ser Oceânico", "ser_oceanico.jpg" },
         { "Vampiro", "vampiro.jpg" }
@@ -155,6 +155,20 @@ public partial class PartidaPage : ContentPage
     //    Criatura3_J2.Text = "00";
     //    Criatura4_J2.Text = "00";
     //}
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
 
+        // Mantém a tela ligada enquanto o app estiver ativo
+        DeviceDisplay.KeepScreenOn = true;
+    }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+
+        // Permite que a tela apague normalmente
+        DeviceDisplay.KeepScreenOn = false;
+    }
 
 }

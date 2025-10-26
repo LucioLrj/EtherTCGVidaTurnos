@@ -5,11 +5,10 @@
              Title="Ether TCG">
 
     <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
-        <Label Text="Ether TCG - Contador de Vidas e Turnos"
-               FontSize="45"
-               TextColor="Black"
-               FontAttributes="Bold"
-               HorizontalOptions="Center" />
+        <Image Source="logo1.png"
+               HeightRequest="180"
+               HorizontalOptions="Center"
+               Aspect="AspectFit" />
 
         <Button Text="Iniciar Partida"
                 FontSize="20"

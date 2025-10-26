@@ -8,4 +8,9 @@ public partial class App : Application
 
         MainPage = new NavigationPage(new MainPage());
     }
+    //protected override void OnStart()
+    //{
+    //    DeviceDisplay.KeepScreenOn = true;
+    //}
+
 }

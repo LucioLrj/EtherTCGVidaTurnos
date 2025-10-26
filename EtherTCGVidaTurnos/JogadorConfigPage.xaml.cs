@@ -9,7 +9,7 @@ public partial class JogadorConfigPage : ContentPage
     // Mapeamento personagem -> arquivo de imagem
     private readonly Dictionary<string, string> personagemParaImagem = new Dictionary<string, string>()
     {
-        { "Elfo", "elfo.jpg" },
+        { "Fada", "fada.jpg" },
         { "Necromante", "necromante.jpg" },
         { "Ser Oceânico", "ser_oceanico.jpg" },
         { "Vampiro", "vampiro.jpg" }

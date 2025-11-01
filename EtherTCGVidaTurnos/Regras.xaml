@@ -2,9 +2,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EtherTCGVidaTurnos.Regras"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="White">
+             BackgroundColor="LightGray">
 
-    <ScrollView Padding="20" VerticalScrollBarVisibility="Always">
+    <Grid RowDefinitions="*,Auto">
+
+        <ScrollView Padding="20" VerticalScrollBarVisibility="Always">
         <VerticalStackLayout Spacing="15">
 
             <Label Text="Regras do Éther Card Game"
@@ -253,12 +255,31 @@ Pode ser feito até 3 vezes, com punições:
                    TextColor="Black"/>
             
             <!-- Botão para voltar à MainPage -->
+            <!--<Button Text="Voltar"
+                    FontSize="20"
+                    Clicked="Voltar_Clicked"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFDC91"
+                    TextColor="Black"/>-->
+        </VerticalStackLayout>
+    </ScrollView>
+
+        <!-- Botão fixo no rodapé -->
+        <Grid Grid.Row="1"
+              Padding="20"
+              BackgroundColor="LightGray"
+              VerticalOptions="End">
             <Button Text="Voltar"
                     FontSize="20"
                     Clicked="Voltar_Clicked"
                     FontAttributes="Bold"
                     BackgroundColor="#FFDC91"
-                    TextColor="Black"/>
-        </VerticalStackLayout>
-    </ScrollView>
+                    TextColor="Black"
+                    HeightRequest="60"
+                    CornerRadius="30"
+                    HorizontalOptions="Fill"/>
+        </Grid>
+
+    </Grid>
+
 </ContentPage>

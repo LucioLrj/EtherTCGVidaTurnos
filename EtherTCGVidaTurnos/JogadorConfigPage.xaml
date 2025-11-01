@@ -1,17 +1,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EtherTCGVidaTurnos.JogadorConfigPage"
-             BackgroundColor="SlateGrey"
+             BackgroundColor="LightGray"
              NavigationPage.HasNavigationBar="False">
 
     <VerticalStackLayout Padding="20" Spacing="20">
-        <Label x:Name="TituloJogador" FontSize="30" TextColor="White" HorizontalOptions="Center" />
+        <Label x:Name="TituloJogador" FontSize="30" TextColor="Black" HorizontalOptions="Center" />
 
-        <Entry x:Name="NomeEntry" Placeholder="Digite o nome do jogador" TextColor="White" FontSize="25" Keyboard="Text"/>
+        <Entry x:Name="NomeEntry" Placeholder="Digite o nome do jogador" TextColor="Black" FontSize="25" Keyboard="Text"/>
 
-        <Label Text="Escolha o Personagem:" FontSize="30" TextColor="White" />
+        <Label Text="Escolha o Personagem:" FontSize="30" TextColor="Black" />
 
-        <Picker x:Name="PersonagemPicker" TextColor="White" FontSize="25" SelectedIndexChanged="OnPersonagemChanged">
+        <Picker x:Name="PersonagemPicker" TextColor="Black" FontSize="25" SelectedIndexChanged="OnPersonagemChanged">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Fada</x:String>

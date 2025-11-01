@@ -4,147 +4,114 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="Transparent">
 
-    <Grid RowDefinitions="*,*" ColumnDefinitions="*">
+    <!-- Grid raiz com as duas metades -->
+    <Grid RowDefinitions="*,*">
 
         <!-- Jogador 1 - Inferior -->
         <Grid Grid.Row="1">
-            <Image x:Name="PersonagemJogador1" Source="necromante.jpg" Aspect="AspectFit"/>
+            <Image x:Name="PersonagemJogador1" Source="necromante.jpg" Aspect="AspectFill"/>
             <AbsoluteLayout>
 
-                <Label Text="{Binding Source={x:Reference NomeJogador1}, Path=Text}" 
-                       FontSize="40" TextColor="Black" FontAttributes="Bold"
-                       AbsoluteLayout.LayoutBounds="0.5,1.0,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                <!-- Nome com contorno -->
+                <Label Text="{Binding Source={x:Reference NomeJogador1}, Path=Text}" FontSize="40" TextColor="Black" FontAttributes="Bold"
+                       AbsoluteLayout.LayoutBounds="0.5,1.0,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
                        TranslationX="-2" TranslationY="-2"/>
-                <Label Text="{Binding Source={x:Reference NomeJogador1}, Path=Text}" 
-                       FontSize="40" TextColor="Black" FontAttributes="Bold"
-                       AbsoluteLayout.LayoutBounds="0.5,1.0,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                <Label Text="{Binding Source={x:Reference NomeJogador1}, Path=Text}" FontSize="40" TextColor="Black" FontAttributes="Bold"
+                       AbsoluteLayout.LayoutBounds="0.5,1.0,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
                        TranslationX="2" TranslationY="-2"/>
-                <Label Text="{Binding Source={x:Reference NomeJogador1}, Path=Text}" 
-                       FontSize="40" TextColor="Black" FontAttributes="Bold"
-                       AbsoluteLayout.LayoutBounds="0.5,1.0,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                <Label Text="{Binding Source={x:Reference NomeJogador1}, Path=Text}" FontSize="40" TextColor="Black" FontAttributes="Bold"
+                       AbsoluteLayout.LayoutBounds="0.5,1.0,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
                        TranslationX="-2" TranslationY="2"/>
-                <Label Text="{Binding Source={x:Reference NomeJogador1}, Path=Text}" 
-                       FontSize="40" TextColor="Black" FontAttributes="Bold"
-                       AbsoluteLayout.LayoutBounds="0.5,1.0,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                <Label Text="{Binding Source={x:Reference NomeJogador1}, Path=Text}" FontSize="40" TextColor="Black" FontAttributes="Bold"
+                       AbsoluteLayout.LayoutBounds="0.5,1.0,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
                        TranslationX="2" TranslationY="2"/>
 
-                <!-- Nome Jogador -->
+                <!-- Nome principal -->
                 <Label x:Name="NomeJogador1" Text="Jogador 1" FontSize="40" TextColor="White" FontAttributes="Bold"
-                       AbsoluteLayout.LayoutBounds="0.5,1.0,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                       AbsoluteLayout.LayoutBounds="0.5,1.0,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
-                <!-- Contorno (duplicado em preto) -->
+                <!-- Contorno da vida -->
                 <Label Text="{Binding Source={x:Reference VidaJogador1}, Path=Text}" FontSize="100" TextColor="Black" FontAttributes="Bold"
-                       AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                       AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
                        TranslationX="-2" TranslationY="-2"/>
                 <Label Text="{Binding Source={x:Reference VidaJogador1}, Path=Text}" FontSize="100" TextColor="Black" FontAttributes="Bold"
-                       AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                       AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
                        TranslationX="2" TranslationY="-2"/>
 
-                <!-- Contador central -->
+                <!-- Vida principal -->
                 <Label x:Name="VidaJogador1" Text="20" FontSize="100" TextColor="White" FontAttributes="Bold"
-                       AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                       AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
-                <!-- Botões + / - de vida -->
-                <Button Text="+" Clicked="OnAumentarVida1"
-                        AbsoluteLayout.LayoutBounds="0.8,0.5,90,90"
-                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                        BackgroundColor="Transparent"
-                        ImageSource="mais.png"/>
-                <Button Text="-" Clicked="OnDiminuirVida1"
-                        AbsoluteLayout.LayoutBounds="0.25,0.5,90,90"
-                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                        BackgroundColor="Transparent"
-                        ImageSource="menos.png"/>
-
+                <!-- Botões de vida -->
+                <Button Clicked="OnAumentarVida1"
+                        AbsoluteLayout.LayoutBounds="0.8,0.5,90,90" AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="Transparent" ImageSource="mais.png"/>
+                <Button Clicked="OnDiminuirVida1"
+                        AbsoluteLayout.LayoutBounds="0.25,0.5,90,90" AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="Transparent" ImageSource="menos.png"/>
             </AbsoluteLayout>
         </Grid>
 
-        <!-- Jogador 2 - Topo -->
+        <!-- Jogador 2 - Superior -->
         <Grid Grid.Row="0">
-            <Image x:Name="PersonagemJogador2" Source="elfo.jpg" Aspect="AspectFill" Rotation="180" />
+            <Image x:Name="PersonagemJogador2" Source="elfo.jpg" Aspect="AspectFill" Rotation="180"/>
             <AbsoluteLayout>
 
-                <Label Text="{Binding Source={x:Reference NomeJogador2}, Path=Text}" 
-                       FontSize="40" TextColor="Black" FontAttributes="Bold" Rotation="180"
-                       AbsoluteLayout.LayoutBounds="0.5,0.0,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                <!-- Nome com contorno -->
+                <Label Text="{Binding Source={x:Reference NomeJogador2}, Path=Text}" FontSize="40" TextColor="Black" FontAttributes="Bold" Rotation="180"
+                       AbsoluteLayout.LayoutBounds="0.5,0.0,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
                        TranslationX="-2" TranslationY="-2"/>
-                <Label Text="{Binding Source={x:Reference NomeJogador2}, Path=Text}" 
-                       FontSize="40" TextColor="Black" FontAttributes="Bold" Rotation="180"
-                       AbsoluteLayout.LayoutBounds="0.5,0.0,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                <Label Text="{Binding Source={x:Reference NomeJogador2}, Path=Text}" FontSize="40" TextColor="Black" FontAttributes="Bold" Rotation="180"
+                       AbsoluteLayout.LayoutBounds="0.5,0.0,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
                        TranslationX="2" TranslationY="-2"/>
-                <Label Text="{Binding Source={x:Reference NomeJogador2}, Path=Text}" 
-                       FontSize="40" TextColor="Black" FontAttributes="Bold" Rotation="180"
-                       AbsoluteLayout.LayoutBounds="0.5,0.0,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                <Label Text="{Binding Source={x:Reference NomeJogador2}, Path=Text}" FontSize="40" TextColor="Black" FontAttributes="Bold" Rotation="180"
+                       AbsoluteLayout.LayoutBounds="0.5,0.0,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
                        TranslationX="-2" TranslationY="2"/>
-                <Label Text="{Binding Source={x:Reference NomeJogador2}, Path=Text}" 
-                       FontSize="40" TextColor="Black" FontAttributes="Bold" Rotation="180"
-                       AbsoluteLayout.LayoutBounds="0.5,0.0,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                <Label Text="{Binding Source={x:Reference NomeJogador2}, Path=Text}" FontSize="40" TextColor="Black" FontAttributes="Bold" Rotation="180"
+                       AbsoluteLayout.LayoutBounds="0.5,0.0,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
                        TranslationX="2" TranslationY="2"/>
 
-                <!-- Nome Jogador -->
-                <Label x:Name="NomeJogador2" Text="Jogador 2" FontSize="40" TextColor="White" Rotation="180" FontAttributes="Bold"
-                       AbsoluteLayout.LayoutBounds="0.5,0.0,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <!-- Nome principal -->
+                <Label x:Name="NomeJogador2" Text="Jogador 2" FontSize="40" TextColor="White" FontAttributes="Bold" Rotation="180"
+                       AbsoluteLayout.LayoutBounds="0.5,0.0,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
-                <!-- Contorno (duplicado em preto) -->
-                <Label Text="{Binding Source={x:Reference VidaJogador2}, Path=Text}" FontSize="100" TextColor="Black"  Rotation="180" FontAttributes="Bold"
-                       AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                <!-- Contorno da vida -->
+                <Label Text="{Binding Source={x:Reference VidaJogador2}, Path=Text}" FontSize="100" TextColor="Black" FontAttributes="Bold" Rotation="180"
+                       AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
                        TranslationX="-2" TranslationY="-2"/>
-                <Label Text="{Binding Source={x:Reference VidaJogador2}, Path=Text}" FontSize="100" TextColor="Black" Rotation="180" FontAttributes="Bold"
-                       AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                <Label Text="{Binding Source={x:Reference VidaJogador2}, Path=Text}" FontSize="100" TextColor="Black" FontAttributes="Bold" Rotation="180"
+                       AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
                        TranslationX="2" TranslationY="-2"/>
 
-                <!-- Contador central -->
-                <Label x:Name="VidaJogador2" Text="20" FontSize="100" TextColor="White" Rotation="180" FontAttributes="Bold"
-                       AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <!-- Vida principal -->
+                <Label x:Name="VidaJogador2" Text="20" FontSize="100" TextColor="White" FontAttributes="Bold" Rotation="180"
+                       AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
-                <!-- Botões + / - de vida -->
-                <Button Text="+" Clicked="OnAumentarVida2"
-                        AbsoluteLayout.LayoutBounds="0.25,0.5,90,90"
-                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                        BackgroundColor="Transparent"
-                        ImageSource="mais.png"/>
-                <Button Text="-" Clicked="OnDiminuirVida2"
-                        AbsoluteLayout.LayoutBounds="0.80,0.5,90,90"
-                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                        BackgroundColor="Transparent"
-                        ImageSource="menos.png"/>
-
+                <!-- Botões de vida -->
+                <Button Clicked="OnAumentarVida2"
+                        AbsoluteLayout.LayoutBounds="0.25,0.5,90,90" AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="Transparent" ImageSource="mais.png"/>
+                <Button Clicked="OnDiminuirVida2"
+                        AbsoluteLayout.LayoutBounds="0.80,0.5,90,90" AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="Transparent" ImageSource="menos.png"/>
             </AbsoluteLayout>
         </Grid>
-        <AbsoluteLayout>
-            
-         <!--Botão de Reset-->
+
+        <!-- Botões flutuantes (Reset / Regras) -->
+        <AbsoluteLayout Grid.RowSpan="2">
             <ImageButton Clicked="OnResetVidaClicked"
-                AbsoluteLayout.LayoutBounds="0,1,60,60"
-                AbsoluteLayout.LayoutFlags="PositionProportional"
-                BackgroundColor="#FFDC91"
-                Source="reiniciar.png"
-                Aspect="AspectFit"/>
+                         AbsoluteLayout.LayoutBounds="0,0.50,40,40"
+                         AbsoluteLayout.LayoutFlags="PositionProportional"
+                         BackgroundColor="#FFDC91"
+                         Source="reiniciar.png"
+                         Aspect="AspectFit"/>
 
-        <!--Botão de Regras-->
             <ImageButton Clicked="OnRegrasClicked"
-            AbsoluteLayout.LayoutBounds="1,1,60,60"
-            AbsoluteLayout.LayoutFlags="PositionProportional"
-            BackgroundColor="#FFDC91"
-            Source="regras.png"
-            Aspect="AspectFit"/>
-
+                         AbsoluteLayout.LayoutBounds="1,0.50,40,40"
+                         AbsoluteLayout.LayoutFlags="PositionProportional"
+                         BackgroundColor="#FFDC91"
+                         Source="regras.png"
+                         Aspect="AspectFit"/>
         </AbsoluteLayout>
     </Grid>
 </ContentPage>

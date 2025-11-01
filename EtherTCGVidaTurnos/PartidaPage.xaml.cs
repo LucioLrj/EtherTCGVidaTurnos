@@ -170,5 +170,9 @@ public partial class PartidaPage : ContentPage
         // Permite que a tela apague normalmente
         DeviceDisplay.KeepScreenOn = false;
     }
+    private async void OnRegrasClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Regras());
+    }
 
 }

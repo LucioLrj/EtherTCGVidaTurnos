@@ -54,4 +54,9 @@ public partial class JogadorConfigPage : ContentPage
         if (personagemParaImagem.ContainsKey(personagemSelecionado))
             PreviewPersonagem.Source = personagemParaImagem[personagemSelecionado];
     }
+    private async void Voltar_Clicked(object sender, EventArgs e)
+    {
+        // Navega de volta para a MainPage
+        await Navigation.PopAsync();
+    }
 }

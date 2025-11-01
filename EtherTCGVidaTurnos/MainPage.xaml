@@ -1,26 +1,21 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EtherTCGVidaTurnos.MainPage"
-             BackgroundColor="White"
+             BackgroundColor="SlateGray"
              NavigationPage.HasNavigationBar="False">
 
     <Grid RowDefinitions="Auto,*,Auto" Padding="20" RowSpacing="20">
 
         <!-- Cabeçalho -->
         <VerticalStackLayout Grid.Row="0" Spacing="10" HorizontalOptions="Center">
-            <Image Source="logo2.png"
-                   HeightRequest="180"
-                   Aspect="AspectFit" />
 
-            <Label Text="Contador de Vida"
-                   FontSize="40"
-                   TextColor="Black"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center" />
         </VerticalStackLayout>
 
         <!-- Corpo -->
         <VerticalStackLayout Grid.Row="1" Spacing="10" VerticalOptions="Center">
+            <Image Source="logo.png"
+                   HeightRequest="180"
+                   Aspect="AspectFit" />
             <Button Text="Iniciar Partida"
                     FontSize="20"
                     Clicked="OnIniciarPartidaClicked"

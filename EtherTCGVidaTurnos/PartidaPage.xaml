@@ -8,7 +8,7 @@
 
         <!-- Jogador 1 - Inferior -->
         <Grid Grid.Row="1">
-            <Image x:Name="PersonagemJogador1" Source="necromante.jpg" Aspect="AspectFill"/>
+            <Image x:Name="PersonagemJogador1" Source="necromante.jpg" Aspect="AspectFit"/>
             <AbsoluteLayout>
 
                 <Label Text="{Binding Source={x:Reference NomeJogador1}, Path=Text}" 
@@ -129,20 +129,21 @@
         </Grid>
         <AbsoluteLayout>
             
-         <!--Botão de Reset--> 
-        <Button Clicked="OnResetVidaClicked"
-                AbsoluteLayout.LayoutBounds="0,1,80,70"
+         <!--Botão de Reset-->
+            <ImageButton Clicked="OnResetVidaClicked"
+                AbsoluteLayout.LayoutBounds="0,1,60,60"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
-                BackgroundColor="Transparent"
-                ImageSource="reiniciar.png"/>
+                BackgroundColor="#FFDC91"
+                Source="reiniciar.png"
+                Aspect="AspectFit"/>
 
         <!--Botão de Regras-->
-        <Button Clicked="OnRegrasClicked"
-            AbsoluteLayout.LayoutBounds="1,1,80,70"
+            <ImageButton Clicked="OnRegrasClicked"
+            AbsoluteLayout.LayoutBounds="1,1,60,60"
             AbsoluteLayout.LayoutFlags="PositionProportional"
-            BackgroundColor="Transparent"
-            ImageSource="regras.png"
-            />
+            BackgroundColor="#FFDC91"
+            Source="regras.png"
+            Aspect="AspectFit"/>
 
         </AbsoluteLayout>
     </Grid>

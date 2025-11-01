@@ -2,7 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EtherTCGVidaTurnos.JogadorConfigPage"
              BackgroundColor="SlateGrey"
-             Title="Jogadores">
+             NavigationPage.HasNavigationBar="False">
 
     <VerticalStackLayout Padding="20" Spacing="20">
         <Label x:Name="TituloJogador" FontSize="30" TextColor="White" HorizontalOptions="Center" />
@@ -31,5 +31,13 @@
                 FontAttributes="Bold"
                 BackgroundColor="#FFDC91"
                 TextColor="Black"/>
+        
+        <Button Text="Voltar"
+                    FontSize="20"
+                    Clicked="Voltar_Clicked"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFDC91"
+                    TextColor="Black"/>
+
     </VerticalStackLayout>
 </ContentPage>

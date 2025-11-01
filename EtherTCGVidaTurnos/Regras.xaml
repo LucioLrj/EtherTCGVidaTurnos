@@ -1,0 +1,264 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EtherTCGVidaTurnos.Regras"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+
+    <ScrollView Padding="20" VerticalScrollBarVisibility="Always">
+        <VerticalStackLayout Spacing="15">
+
+            <Label Text="Regras do Éther Card Game"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <Label Text="⚙ Montagem do Baralho e o Jogo"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+            <Label FontSize="16" TextColor="Black">
+                <Label.Text>
+                    <![CDATA[ 
+• Cada jogador começa com um baralho de 36 cartas.
+• Permitido até 3 cópias de cada carta.
+• Cartas do tipo Pilha podem ser incluídas em quantidade ilimitada.
+• Não há restrição de classes — o jogador pode montar seu baralho com quaisquer tipos de cartas.
+• Cada jogador inicia com 20 pontos de vida.
+• O jogo termina quando um dos jogadores chegar a 0 pontos de vida.
+                    ]]>
+                </Label.Text>
+            </Label>
+
+            <Label Text="🔁 Mulligan"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+            
+            <Label FontSize="16" TextColor="Black">
+                <Label.Text>
+                    <![CDATA[ 
+Pode ser feito até 3 vezes, com punições:
+• Compra 6 → devolve → compra 5 → devolve → compra 4 → devolve → compra 3.
+• Sempre que devolver cartas ao baralho, é obrigatório reembaralhar o baralho.
+                    ]]>
+                </Label.Text>
+            </Label>
+
+            <Label Text="🧭 Estrutura de Turnos"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+            <Label FontSize="16" TextColor="Black">
+                <Label.Text>
+                    <![CDATA[ 
+🔹 Turno 0 — Preparação
+• Cada jogador começa com 6 cartas e pode colocar:
+ • 1 carta Nv1 ativa (virada para cima);
+ • 1 carta Nv2, Nv3 ou NvE em preparação (virada para baixo);
+ • 1 terreno ativo ou 1 pilha ou 1 efeito (escolher apenas 1).
+                    
+📜 Importante:
+• No turno 0 não é permitido atacar.
+• Os efeitos das cartas (criaturas, efeitos e terrenos) são ativados imediatamente quando colocadas.
+• O efeito do terreno também é ativado assim que entra no campo.
+• As cartas devem ser colocadas na ordem correta do tabuleiro, da esquerda para a direita, obrigatoriamente.
+
+❌ Não é permitido, por exemplo, ativar uma NV1 no slot 1 e colocar uma carta em preparação no slot 4.
+                    
+🔹 Turno 1 — Ação e Combate
+🔹 Durante o turno 1 o jogador pode:
+• Baixar 1 carta, sendo Terreno, Pilha ou Efeito de Ativação (escolher apenas uma dessas opções);
+• Colocar uma NV1 ativa ou evoluir uma carta que está em preparação (não as duas coisas);
+• Ativar 1 carta de efeito durante o seu turno;
+• Usar outra carta de efeito no turno de defesa, caso ela já esteja em preparação;
+• Atacar com suas criaturas ativas.
+
+📌 Toda criatura ativa que entra em campo conta como tendo 1 turno de atividade, o que é importante para cartas que exigem tempo em campo para evoluir (Sequência).
+                    ]]>
+                </Label.Text>
+            </Label>
+
+            <Label Text="💥 Efeitos, Especiais e Sinergias"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+            <Label Text="✴ Efeitos e Especiais das Criaturas"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+            <Label FontSize="16" TextColor="Black">
+                <Label.Text>
+                    <![CDATA[ 
+• São ativados imediatamente quando a criatura entra ativa no campo.
+• Cada efeito é acionado apenas uma vez por turno.
+• Buffs/Debuffs são permanentes nas cartas afetadas, mesmo que a criatura que os gerou saia do campo.
+• Se a criatura for para o descarte e voltar, ela retorna sem os buffs anteriores.
+                    ]]>
+                </Label.Text>
+            </Label>
+
+            <Label Text="🌐 Sinergias"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+            <Label FontSize="16" TextColor="Black">
+                <Label.Text>
+                    <![CDATA[ 
+• São efeitos constantes e não dependem da permanência da carta que os gerou.
+• A sinergia apoia outras criaturas, mas não afeta a si mesma.
+
+🔹 Exemplo:
+• “Sinergia: Fadas recebem +1.” → Toda fada em campo ganha +1.
+• Se houver duas fadas com essa sinergia, os bônus se somam (+2).
+                    ]]>
+                </Label.Text>
+            </Label>
+
+            <Label Text="🔄 Evolução (Sequência)"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+            <Label FontSize="16" TextColor="Black">
+                <Label.Text>
+                    <![CDATA[ 
+🔹 Toda carta possui uma condição de evolução.
+
+🔹 Para evoluir:
+• A NV1 deve estar ativa no campo;
+• A NV2 deve estar em preparação.
+
+• Quando a condição é cumprida (ex: “Descarte 2 cartas”), o jogador evolui colocando a NV2 sobre a NV1.
+• A nova criatura já pode atacar no mesmo turno.
+• Se for do tipo Substituir, a NV1 é enviada ao descarte.
+• O descarte conta apenas para ações intencionais (da mão ou do campo).
+                    ]]>
+                </Label.Text>
+            </Label>
+
+            <Label Text="❌ Não contam como descarte"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+            <Label FontSize="16" TextColor="Black">
+                <Label.Text>
+                    <![CDATA[ 
+🔹 Cartas derrotadas ou usadas naturalmente (efeitos, slots cheios, compra de carta extra, etc.).
+                    ]]>
+                </Label.Text>
+            </Label>
+
+            <Label Text="⚔ Ataques e Defesas"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+            <Label FontSize="16" TextColor="Black">
+                <Label.Text>
+                    <![CDATA[ 
+• Os combates são sempre criatura contra criatura.
+• O ataque é direcionado aos pontos de vida do oponente.
+• O defensor pode escolher qual ataque bloquear.
+• Ataques não bloqueados causam dano direto ao oponente.
+
+🧩 Exemplo de Combate:
+• Criatura Atacante: 2 Força/Vida
+• Criatura Defensora: 1 Força/Vida
+🔹 Resultado:
+• A atacante fica com 1 de vida;
+• A defensora vai para o descarte;
+• Nenhum dano passa ao jogador.
+                    ]]>
+                </Label.Text>
+            </Label>
+
+            <Label Text="🃏 Tipos de Cartas"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+            <Label Text="🌀 Pilha"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+            <Label FontSize="16" TextColor="Black">
+                <Label.Text>
+                    <![CDATA[ 
+• Podem ser colocadas no seu campo ou no do oponente, sem restrições.
+• Funcionam como fonte de evolução ou benefício para criaturas específicas.
+• Exemplos: Osso, Música, Festa, Maré, Sangue, etc.
+• Mesmo tipo de Pilha deve ocupar slots separados, mas contam em conjunto.
+                    ]]>
+                </Label.Text>
+            </Label>
+
+            <Label Text="🌍 Terrenos"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+            <Label FontSize="16" TextColor="Black">
+                <Label.Text>
+                    <![CDATA[ 
+• Podem ser colocados no seu campo ou no do oponente, sem restrições.
+• Cada terreno possui efeito próprio ativado ao ser colocado.
+• ⚠️ Apenas 1 terreno, pilha ou efeito pode ser baixado por turno.
+                    ]]>
+                </Label.Text>
+            </Label>
+
+            <Label Text="🧙‍♂ Criaturas"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+            <Label FontSize="16" TextColor="Black">
+                <Label.Text>
+                    <![CDATA[ 
+• Possuem Nível (NV), Sequência, Força/Vida, Efeitos e Sinergias.
+• O nível indica sua fase de evolução.
+• A sequência mostra para qual carta pode evoluir.
+                    ]]>
+                </Label.Text>
+            </Label>
+
+            <Label Text="🔮 Efeitos de Ativação"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+            <Label FontSize="16" TextColor="Black">
+                <Label.Text>
+                    <![CDATA[ 
+• Sempre colocados virados para baixo em preparação.
+• Podem ser ativados no seu turno ou no turno de defesa, se já estiverem em preparação.
+• Apenas 1 carta de efeito pode ser usada por turno.
+• Alguns efeitos funcionam “NO CAMPO” (valem para os dois lados).
+• Outros funcionam apenas “NO SEU CAMPO” (limitados ao seu lado).
+                    ]]>
+                </Label.Text>
+            </Label>
+
+            <Label Text="⚠️ Sempre leia a descrição da carta para entender o alcance do efeito."
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+            
+            <!-- Botão para voltar à MainPage -->
+            <Button Text="Voltar"
+                    FontSize="20"
+                    Clicked="Voltar_Clicked"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFDC91"
+                    TextColor="Black"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

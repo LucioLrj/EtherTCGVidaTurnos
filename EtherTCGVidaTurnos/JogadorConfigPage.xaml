@@ -23,7 +23,7 @@
         </Picker>
 
         <!-- Prévia do personagem -->
-        <Image x:Name="PreviewPersonagem" HeightRequest="200" Aspect="AspectFill" HorizontalOptions="Center" />
+        <Image x:Name="PreviewPersonagem" HeightRequest="200" Aspect="AspectFit" HorizontalOptions="Center" />
 
         <Button Text="Confirmar" 
                 FontSize="20"

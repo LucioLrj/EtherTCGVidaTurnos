@@ -24,25 +24,42 @@ public partial class JogadorConfigPage : ContentPage
 
     private async void OnConfirmarClicked(object sender, EventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(NomeEntry.Text) || PersonagemPicker.SelectedItem == null)
+        if (PersonagemPicker.SelectedItem == null)
         {
-            await DisplayAlert("Aviso", "Preencha o nome e escolha um personagem.", "OK");
+            await DisplayAlert("Aviso", "Escolha um personagem.", "OK");
             return;
         }
 
+        string personagemSelecionado = PersonagemPicker.SelectedItem.ToString()!;
+
+        // Se o nome estiver vazio, usa o nome do personagem
+        string nomeFinal = string.IsNullOrWhiteSpace(NomeEntry.Text)
+            ? personagemSelecionado
+            : NomeEntry.Text.Trim();
+
         if (jogadorNumero == 1)
         {
-            nomeJogador1 = NomeEntry.Text;
-            personagemJogador1 = PersonagemPicker.SelectedItem.ToString();
+            nomeJogador1 = nomeFinal;
+            personagemJogador1 = personagemSelecionado;
+
             await Navigation.PushAsync(new JogadorConfigPage(2));
         }
         else
         {
-            nomeJogador2 = NomeEntry.Text;
-            personagemJogador2 = PersonagemPicker.SelectedItem.ToString();
-            await Navigation.PushAsync(new PartidaPage(nomeJogador1!, personagemJogador1!, nomeJogador2!, personagemJogador2!));
+            nomeJogador2 = nomeFinal;
+            personagemJogador2 = personagemSelecionado;
+
+            await Navigation.PushAsync(
+                new PartidaPage(
+                    nomeJogador1!,
+                    personagemJogador1!,
+                    nomeJogador2!,
+                    personagemJogador2!
+                )
+            );
         }
     }
+
 
     // Atualiza preview quando o jogador muda a seleção
     private void OnPersonagemChanged(object sender, EventArgs e)

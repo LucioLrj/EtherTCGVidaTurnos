@@ -197,7 +197,10 @@ Pode ser feito até 3 vezes, com punições:
 • Podem ser colocadas no seu campo ou no do oponente, sem restrições.
 • Funcionam como fonte de evolução ou benefício para criaturas específicas.
 • Exemplos: Osso, Música, Festa, Maré, Sangue, etc.
-• Mesmo tipo de Pilha deve ocupar slots separados, mas contam em conjunto.
+
+📜 Importante:
+• Pilhas iguais ocupam o mesmo slot.
+• Pilhas diferentes ocupam slots diferentes.
                     ]]>
                 </Label.Text>
             </Label>

@@ -6,6 +6,12 @@
 
     <!-- Grid raiz com as duas metades -->
     <Grid RowDefinitions="*,*">
+        
+        <!-- Flash de cura -->
+        <BoxView x:Name="FlashCura"
+         BackgroundColor="#5500FF00"
+         Opacity="0"
+         Grid.RowSpan="2"/>
 
         <!-- Jogador 1 - Inferior -->
         <Grid Grid.Row="1">
@@ -38,17 +44,72 @@
                        AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
                        TranslationX="2" TranslationY="-2"/>
 
+                <!-- Feedback visual vida J1 - Borda -->
+                <Label x:Name="DeltaVidaJogador1_Outline1"
+       FontSize="40"
+       FontAttributes="Bold"
+       TextColor="Black"
+       IsVisible="False"
+       TranslationX="-1"
+       TranslationY="-1"
+       AbsoluteLayout.LayoutBounds="0.5,0.35,AutoSize,AutoSize"
+       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                <Label x:Name="DeltaVidaJogador1_Outline2"
+       FontSize="40"
+       FontAttributes="Bold"
+       TextColor="Black"
+       IsVisible="False"
+       TranslationX="1"
+       TranslationY="-1"
+       AbsoluteLayout.LayoutBounds="0.5,0.35,AutoSize,AutoSize"
+       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                <Label x:Name="DeltaVidaJogador1_Outline3"
+       FontSize="40"
+       FontAttributes="Bold"
+       TextColor="Black"
+       IsVisible="False"
+       TranslationX="-1"
+       TranslationY="1"
+       AbsoluteLayout.LayoutBounds="0.5,0.35,AutoSize,AutoSize"
+       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                <Label x:Name="DeltaVidaJogador1_Outline4"
+       FontSize="40"
+       FontAttributes="Bold"
+       TextColor="Black"
+       IsVisible="False"
+       TranslationX="1"
+       TranslationY="1"
+       AbsoluteLayout.LayoutBounds="0.5,0.35,AutoSize,AutoSize"
+       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                <!-- Feedback visual vida J1 - Texto principal -->
+                <Label x:Name="DeltaVidaJogador1"
+       FontSize="40"
+       FontAttributes="Bold"
+       TextColor="DarkGreen"
+       IsVisible="False"
+       AbsoluteLayout.LayoutBounds="0.5,0.35,AutoSize,AutoSize"
+       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+
                 <!-- Vida principal -->
                 <Label x:Name="VidaJogador1" Text="20" FontSize="100" TextColor="White" FontAttributes="Bold"
                        AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
                 <!-- Botões de vida -->
                 <Button Clicked="OnAumentarVida1"
-                        AbsoluteLayout.LayoutBounds="0.8,0.5,90,90" AbsoluteLayout.LayoutFlags="PositionProportional"
-                        BackgroundColor="Transparent" ImageSource="mais.png"/>
+                        AbsoluteLayout.LayoutBounds="0.8,0.5,80,80" 
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="Transparent" 
+                        ImageSource="mais.png"/>
                 <Button Clicked="OnDiminuirVida1"
-                        AbsoluteLayout.LayoutBounds="0.25,0.5,90,90" AbsoluteLayout.LayoutFlags="PositionProportional"
-                        BackgroundColor="Transparent" ImageSource="menos.png"/>
+                        AbsoluteLayout.LayoutBounds="0.20,0.5,80,80" 
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="Transparent" 
+                        ImageSource="menos.png"/>
             </AbsoluteLayout>
         </Grid>
 
@@ -83,17 +144,79 @@
                        AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"
                        TranslationX="2" TranslationY="-2"/>
 
+                <!-- Feedback visual vida J2 - Borda -->
+                <Label x:Name="DeltaVidaJogador2_Outline1"
+       FontSize="40"
+       FontAttributes="Bold"
+       TextColor="Black"
+       Rotation="180"
+       IsVisible="False"
+       TranslationX="-1"
+       TranslationY="-1"
+       AbsoluteLayout.LayoutBounds="0.5,0.65,AutoSize,AutoSize"
+       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                <Label x:Name="DeltaVidaJogador2_Outline2"
+       FontSize="40"
+       FontAttributes="Bold"
+       TextColor="Black"
+       Rotation="180"
+       IsVisible="False"
+       TranslationX="1"
+       TranslationY="-1"
+       AbsoluteLayout.LayoutBounds="0.5,0.65,AutoSize,AutoSize"
+       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                <Label x:Name="DeltaVidaJogador2_Outline3"
+       FontSize="40"
+       FontAttributes="Bold"
+       TextColor="Black"
+       Rotation="180"
+       IsVisible="False"
+       TranslationX="-1"
+       TranslationY="1"
+       AbsoluteLayout.LayoutBounds="0.5,0.65,AutoSize,AutoSize"
+       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                <Label x:Name="DeltaVidaJogador2_Outline4"
+       FontSize="40"
+       FontAttributes="Bold"
+       TextColor="Black"
+       Rotation="180"
+       IsVisible="False"
+       TranslationX="1"
+       TranslationY="1"
+       AbsoluteLayout.LayoutBounds="0.5,0.65,AutoSize,AutoSize"
+       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                <!-- Feedback visual vida J2 - Texto principal -->
+                <Label x:Name="DeltaVidaJogador2"
+       FontSize="40"
+       FontAttributes="Bold"
+       TextColor="DarkGreen"
+       Rotation="180"
+       IsVisible="False"
+       AbsoluteLayout.LayoutBounds="0.5,0.65,AutoSize,AutoSize"
+       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+
+
                 <!-- Vida principal -->
                 <Label x:Name="VidaJogador2" Text="20" FontSize="100" TextColor="White" FontAttributes="Bold" Rotation="180"
                        AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
                 <!-- Botões de vida -->
                 <Button Clicked="OnAumentarVida2"
-                        AbsoluteLayout.LayoutBounds="0.25,0.5,90,90" AbsoluteLayout.LayoutFlags="PositionProportional"
-                        BackgroundColor="Transparent" ImageSource="mais.png"/>
+                        AbsoluteLayout.LayoutBounds="0.20,0.5,80,80" 
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="Transparent" 
+                        ImageSource="mais.png"/>
+                
                 <Button Clicked="OnDiminuirVida2"
-                        AbsoluteLayout.LayoutBounds="0.80,0.5,90,90" AbsoluteLayout.LayoutFlags="PositionProportional"
-                        BackgroundColor="Transparent" ImageSource="menos.png"/>
+                        AbsoluteLayout.LayoutBounds="0.80,0.5,80,80"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="Transparent"
+                        ImageSource="menos.png"/>
             </AbsoluteLayout>
         </Grid>
 

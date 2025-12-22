@@ -16,6 +16,7 @@
             <Image Source="logo.png"
                    HeightRequest="180"
                    Aspect="AspectFit" />
+            
             <Button Text="Iniciar Partida"
                     FontSize="20"
                     Clicked="OnIniciarPartidaClicked"
@@ -29,6 +30,28 @@
                     FontAttributes="Bold"
                     BackgroundColor="#FFDC91"
                     TextColor="Black"/>
+
+            <Button Text="Site"
+                    FontSize="20"
+                    Clicked="OnSiteClicked"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFDC91"
+                    TextColor="Black"/>
+            
+            <Button Text="Loja"
+                    FontSize="20"
+                    Clicked="OnLojaClicked"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFDC91"
+                    TextColor="Black"/>
+
+            <Button Text="Compendium"
+                    FontSize="20"
+                    Clicked="OnCompendiumClicked"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFDC91"
+                    TextColor="Black"/>
+
         </VerticalStackLayout>
 
         <!-- Rodapé -->

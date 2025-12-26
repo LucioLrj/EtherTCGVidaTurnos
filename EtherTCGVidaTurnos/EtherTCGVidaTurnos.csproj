@@ -64,12 +64,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Sobre.xaml.cs">
+	    <DependentUpon>Sobre.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="WebPage.xaml.cs">
 	    <DependentUpon>WebPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Sobre.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="WebPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -24,7 +24,7 @@
                 <Label.Text>
                     <![CDATA[ 
 • Cada jogador começa com um baralho de 36 cartas.
-• Permitido até 3 cópias de cada carta.
+• Permitido até 3 cópias de cada carta. (Cartas com o mesmo nome).
 • Cartas do tipo Pilha podem ser incluídas em quantidade ilimitada.
 • Não há restrição de classes — o jogador pode montar seu baralho com quaisquer tipos de cartas.
 • Cada jogador inicia com 20 pontos de vida.
@@ -60,7 +60,7 @@ Pode ser feito até 3 vezes, com punições:
 • Cada jogador começa com 6 cartas e pode colocar:
  • 1 carta Nv1 ativa (virada para cima);
  • 1 carta Nv2, Nv3 ou NvE em preparação (virada para baixo);
- • 1 terreno ativo ou 1 pilha ou 1 efeito (escolher apenas 1).
+ • Escolher entre colocar 1 Terreno ativo ou 1 Pilha ativa ou 1 Efeito em preparação.
                     
 📜 Importante:
 • No turno 0 não é permitido atacar.
@@ -100,6 +100,8 @@ Pode ser feito até 3 vezes, com punições:
 • Cada efeito é acionado apenas uma vez por turno.
 • Buffs/Debuffs são permanentes nas cartas afetadas, mesmo que a criatura que os gerou saia do campo.
 • Se a criatura for para o descarte e voltar, ela retorna sem os buffs anteriores.
+• ⚠️ Os efeitos e especiais só serão ativados quando a criatura estiver ativa (virada para cima).
+• ⚠️ Existem efeitos e especiais que são ativados mesmo após a criatura já ter sido ativada, por exemplo, "Crie uma MODEDA quando o oponente DESCARTAR uma CARTA".
                     ]]>
                 </Label.Text>
             </Label>
@@ -216,6 +218,7 @@ Pode ser feito até 3 vezes, com punições:
 • Podem ser colocados no seu campo ou no do oponente, sem restrições.
 • Cada terreno possui efeito próprio ativado ao ser colocado.
 • ⚠️ Apenas 1 terreno, pilha ou efeito pode ser baixado por turno.
+• ⚠️ Somente pode haver 1 terreno ativo por jogador, sendo substituido quando um novo for colocado.
                     ]]>
                 </Label.Text>
             </Label>
@@ -257,13 +260,6 @@ Pode ser feito até 3 vezes, com punições:
                    FontAttributes="Bold"
                    TextColor="Black"/>
             
-            <!-- Botão para voltar à MainPage -->
-            <!--<Button Text="Voltar"
-                    FontSize="20"
-                    Clicked="Voltar_Clicked"
-                    FontAttributes="Bold"
-                    BackgroundColor="#FFDC91"
-                    TextColor="Black"/>-->
         </VerticalStackLayout>
     </ScrollView>
 

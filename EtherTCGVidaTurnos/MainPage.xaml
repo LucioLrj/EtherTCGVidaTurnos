@@ -52,6 +52,13 @@
                     BackgroundColor="#FFDC91"
                     TextColor="Black"/>
 
+            <Button Text="Sobre"
+                    FontSize="20"
+                    Clicked="OnSobreClicked"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFDC91"
+                    TextColor="Black"/>
+
         </VerticalStackLayout>
 
         <!-- Rodapé -->

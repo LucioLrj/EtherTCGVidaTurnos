@@ -50,7 +50,10 @@ public partial class MainPage : ContentPage
         var url = "https://ethercompendium.base44.app/";
         await Launcher.OpenAsync(new Uri(url));
     }
-
+    private async void OnSobreClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Sobre());
+    }
 }
 
 //Links Úteis:

@@ -1,30 +1,33 @@
 # 🛡️ Ether TCG - Contador de Vida e Turnos
 
 ![Status](https://img.shields.io/badge/Status-Publicado-brightgreen)
-![Unity](https://img.shields.io/badge/Made%20with-Unity-black?logo=unity)
+![Visual Studio 2022](https://img.shields.io/badge/IDE-Visual%20Studio%202022-purple?logo=visual-studio)
 ![C#](https://img.shields.io/badge/Language-C%23-blueviolet?logo=c-sharp)
+![.NET](https://img.shields.io/badge/.NET-Framework%20/%20Core-512BD4?logo=dotnet)
 
-**Ether TCG - Contador de Vida e Turnos** é uma ferramenta essencial para jogadores do card game Ether. O aplicativo foi desenvolvido para simplificar a gestão das partidas, permitindo que os jogadores foquem no que realmente importa: a estratégia.
+**Ether TCG - Contador de Vida e Turnos** é uma ferramenta desktop desenvolvida em C# para auxiliar jogadores de Trading Card Games (TCG). O foco principal é a praticidade e a rapidez no registro de dados durante partidas competitivas ou casais.
 
 ---
 
 ## 🚀 Funcionalidades
 
-- **Controle Dinâmico de Vida:** Adicione ou subtraia pontos de vida de forma rápida e intuitiva.
-- **Marcador de Turnos:** Acompanhe o progresso da partida sem perder a conta de quem está na vez.
-- **Interface Otimizada:** Design limpo e focado na usabilidade durante o jogo real.
-- **Suporte à Comunidade:** Criado por e para a comunidade de Ether TCG.
+- **Controle de HP Preciso:** Interface numérica para adição e subtração de pontos de vida.
+- **Gestão de Turnos:** Contador integrado para controle das fases do jogo.
+- **Interface Desktop Leve:** Execução rápida e baixo consumo de recursos do sistema.
+- **Foco em Usabilidade:** Atalhos e botões pensados para quem está com as mãos ocupadas com cartas físicas.
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Engine:** [Unity 2022.3+](https://unity.com/) (ou versão utilizada no projeto)
+- **IDE:** Visual Studio 2022
 - **Linguagem:** C#
-- **UI:** Unity UI System (Canvas)
+- **Framework:** .NET (Windows Forms / WPF)
+- **Paradigma:** Orientação a Objetos
 
 ## 📦 Como Instalar e Rodar
 
-Se você é um desenvolvedor e deseja compilar o projeto:
+Para executar o projeto ou contribuir com o código:
 
-1. Clone o repositório:
+1. **Pré-requisitos:** Ter o [Visual Studio 2022](https://visualstudio.microsoft.com/pt-br/vs/) instalado com a carga de trabalho de "Desenvolvimento para desktop com .NET".
+2. **Clone o repositório:**
    ```bash
    git clone [https://github.com/LucioLrj/EtherTCGVidaTurnos.git](https://github.com/LucioLrj/EtherTCGVidaTurnos.git)

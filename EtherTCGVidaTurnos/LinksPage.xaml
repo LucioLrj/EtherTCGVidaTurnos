@@ -1,6 +1,6 @@
-﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EtherTCGVidaTurnos.MainPage"
+             x:Class="EtherTCGVidaTurnos.LinksPage"
              BackgroundColor="LightGray"
              NavigationPage.HasNavigationBar="False">
 
@@ -16,43 +16,79 @@
             <Image Source="logo.png"
                    HeightRequest="180"
                    Aspect="AspectFit" />
-            
-            <Button Text="Iniciar Partida"
+
+            <Button Text="Site"
                     FontSize="20"
-                    Clicked="OnIniciarPartidaClicked"
+                    Clicked="OnSiteClicked"
                     FontAttributes="Bold"
                     BackgroundColor="#FFDC91"
                     TextColor="Black"/>
 
-            <Button Text="Regras"
+            <Button Text="Loja"
                     FontSize="20"
-                    Clicked="OnRegrasClicked"
+                    Clicked="OnLojaClicked"
                     FontAttributes="Bold"
                     BackgroundColor="#FFDC91"
                     TextColor="Black"/>
 
-            <Button Text="Links Úteis"
+            <Button Text="Compendium"
                     FontSize="20"
-                    Clicked="OnLinksClicked"
+                    Clicked="OnCompendiumClicked"
                     FontAttributes="Bold"
                     BackgroundColor="#FFDC91"
                     TextColor="Black"/>
 
-            <Button Text="Sobre"
+            <Button Text="Simulador"
                     FontSize="20"
-                    Clicked="OnSobreClicked"
+                    Clicked="OnSimuladorClicked"
                     FontAttributes="Bold"
                     BackgroundColor="#FFDC91"
                     TextColor="Black"/>
 
-            <Button Text="Sair"
+            <HorizontalStackLayout
+    Spacing="20"
+    HorizontalOptions="Center"
+    Margin="0,10">
+
+                <ImageButton
+        Source="whatsapp.png"
+        HeightRequest="50"
+        WidthRequest="50"
+        BackgroundColor="Transparent"
+        Clicked="OnWhatsappClicked" />
+
+                <ImageButton
+        Source="discord.png"
+        HeightRequest="50"
+        WidthRequest="50"
+        BackgroundColor="Transparent"
+        Clicked="OnDiscordClicked" />
+
+                <ImageButton
+        Source="instagram.png"
+        HeightRequest="50"
+        WidthRequest="50"
+        BackgroundColor="Transparent"
+        Clicked="OnInstagramClicked" />
+
+                <ImageButton
+        Source="youtube.png"
+        HeightRequest="50"
+        WidthRequest="50"
+        BackgroundColor="Transparent"
+        Clicked="OnYoutubeClicked" />
+
+            </HorizontalStackLayout>
+
+
+            <Button Text="Voltar"
                     FontSize="20"
-                    Clicked="OnSairClicked"
+                    Clicked="OnVoltarClicked"
                     FontAttributes="Bold"
                     BackgroundColor="#FFDC91"
                     TextColor="Black"
                     CornerRadius="30"/>
-
+            
         </VerticalStackLayout>
 
         <!-- Rodapé -->
@@ -62,7 +98,7 @@
                TextColor="Black"
                HorizontalOptions="Center"
                VerticalOptions="End" />
-        
+
         <Label Grid.Row="2"
                Text="Este é um projeto feito de fãs para fãs, não oficial."
                FontSize="15"
@@ -70,4 +106,5 @@
                HorizontalOptions="Center"
                VerticalOptions="End" />
     </Grid>
+    
 </ContentPage>

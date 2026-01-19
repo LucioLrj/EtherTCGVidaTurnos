@@ -9,6 +9,19 @@
         <ScrollView Padding="20" VerticalScrollBarVisibility="Always">
             <VerticalStackLayout Spacing="15">
 
+                <Label Text="Sobre o Éther Card Game"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+                <Label FontSize="16" TextColor="Black">
+                    <Label.Text>
+                        <![CDATA[ Em Construção!
+                    ]]>
+                    </Label.Text>
+                </Label>
+
                 <Label Text="Sobre o Éther Counter"
                    FontSize="26"
                    FontAttributes="Bold"

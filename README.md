@@ -1,4 +1,4 @@
-# 🛡️ Ether TCG - Contador de Vida e Turnos
+# 🛡️ Éther Counter
 
 ![Status](https://img.shields.io/badge/Status-Publicado-brightgreen)
 ![Visual Studio 2022](https://img.shields.io/badge/IDE-Visual%20Studio%202022-purple?logo=visual-studio)

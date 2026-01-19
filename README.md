@@ -5,14 +5,13 @@
 ![C#](https://img.shields.io/badge/Language-C%23-blueviolet?logo=c-sharp)
 ![.NET](https://img.shields.io/badge/.NET-Framework%20/%20Core-512BD4?logo=dotnet)
 
-**Ether TCG - Contador de Vida e Turnos** é uma ferramenta desktop desenvolvida em C# para auxiliar jogadores de Trading Card Games (TCG). O foco principal é a praticidade e a rapidez no registro de dados durante partidas competitivas ou casais.
+**Éther Counter** é uma ferramenta desktop desenvolvida em C# para auxiliar jogadores de Trading Card Games (TCG). O foco principal é a praticidade e a rapidez no registro de dados durante partidas competitivas ou casais.
 
 ---
 
 ## 🚀 Funcionalidades
 
 - **Controle de HP Preciso:** Interface numérica para adição e subtração de pontos de vida.
-- **Gestão de Turnos:** Contador integrado para controle das fases do jogo.
 - **Interface Desktop Leve:** Execução rápida e baixo consumo de recursos do sistema.
 - **Foco em Usabilidade:** Atalhos e botões pensados para quem está com as mãos ocupadas com cartas físicas.
 

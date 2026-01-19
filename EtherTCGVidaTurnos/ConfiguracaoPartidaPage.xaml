@@ -1,0 +1,93 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EtherTCGVidaTurnos.ConfiguracaoPartidaPage"
+             xmlns:conv="clr-namespace:EtherTCGVidaTurnos.Converters"
+             BackgroundColor="LightGray"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout Padding="20" Spacing="16">
+
+        <Label
+        Text="Configurações da Partida"
+        FontSize="22"
+        FontAttributes="Bold" />
+
+        <Grid ColumnDefinitions="Auto,*"
+      RowDefinitions="Auto,Auto"
+      RowSpacing="12"
+      ColumnSpacing="10">
+            
+            <CheckBox Grid.Row="1" Grid.Column="0"
+              IsChecked="{Binding AnimacoesAtivadas}" />
+            
+        <Label Grid.Row="1" 
+               Grid.Column="1"
+               Text="Ativar Animações?"
+               FontSize="18"
+               TextColor="Black"
+               VerticalTextAlignment="Center" />
+
+        </Grid>
+
+        <Label Text="Modo da Partida"
+               FontAttributes="Bold"
+               FontSize="22"
+               Margin="0,10,0,0" />
+
+        <Grid ColumnDefinitions="Auto,*"
+              RowDefinitions="Auto,Auto"
+              RowSpacing="12"
+              ColumnSpacing="10">
+
+        <RadioButton Grid.Row="0"
+                     Grid.Column="0"
+                     GroupName="VidaInicial"
+                     BorderColor="Black"
+                     IsChecked="{ Binding VidaInicial
+                                , Mode=TwoWay
+                                , Converter={StaticResource IntToBoolConverter}
+                                , ConverterParameter=20 }"/>
+        <Label Grid.Row="0"
+               Grid.Column="1"
+               Text="Padrão - 20 Pontos de Vida"
+               FontSize="18"
+               TextColor="Black"
+               VerticalTextAlignment="Center" />
+            
+        <RadioButton Grid.Row="1"
+                     Grid.Column="0"
+                     GroupName="VidaInicial"
+                     BorderColor="Black"
+                     IsChecked="{ Binding VidaInicial
+                                , Mode=TwoWay
+                                , Converter={StaticResource IntToBoolConverter}
+                                , ConverterParameter=40 }" />
+
+        <Label Grid.Row="1"
+               Grid.Column="1"
+               Text="Casual - 40 Pontos de Vida"
+               FontSize="18"
+               TextColor="Black"
+               VerticalTextAlignment="Center" />
+
+
+            
+        </Grid>
+
+        <Button Text="Avançar"
+                FontSize="20"
+                FontAttributes="Bold"
+                BackgroundColor="#FFDC91"
+                TextColor="Black"
+                Clicked="OnAvancarClicked" />
+
+        <Button Text="Voltar"
+                FontSize="20"
+                FontAttributes="Bold"
+                BackgroundColor="#FFDC91"
+                TextColor="Black"
+                CornerRadius="30"
+                Clicked="OnVoltarClicked"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>

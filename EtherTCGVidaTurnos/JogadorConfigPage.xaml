@@ -33,11 +33,12 @@
                 TextColor="Black"/>
         
         <Button Text="Voltar"
-                    FontSize="20"
-                    Clicked="Voltar_Clicked"
-                    FontAttributes="Bold"
-                    BackgroundColor="#FFDC91"
-                    TextColor="Black"/>
+                FontSize="20"
+                FontAttributes="Bold"
+                BackgroundColor="#FFDC91"
+                TextColor="Black"
+                CornerRadius="30"
+                Clicked="OnVoltarClicked"/>
 
     </VerticalStackLayout>
 </ContentPage>

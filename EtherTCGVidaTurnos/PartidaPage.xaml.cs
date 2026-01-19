@@ -1,3 +1,4 @@
+using EtherTCGVidaTurnos.Core;
 namespace EtherTCGVidaTurnos;
 
 public partial class PartidaPage : ContentPage
@@ -7,13 +8,31 @@ public partial class PartidaPage : ContentPage
     public PartidaPage()
     {
         InitializeComponent();
+
     }
+    // ========================= CONFIGURAÇÃO DA PARTIDA =========================
+
+    private bool ShakeAtivo =>
+        EstadoPartida.Configuracao?.AnimacoesAtivadas ?? true;
+
+    private bool VibracaoAtiva =>
+        EstadoPartida.Configuracao?.AnimacoesAtivadas ?? true;
+
+    private bool AnimacoesAtivas =>
+        EstadoPartida.Configuracao?.AnimacoesAtivadas ?? true;
+
+    private int VidaInicial =>
+        EstadoPartida.Configuracao?.VidaInicial ?? 20;
+
 
     public PartidaPage(string nome1, string personagem1, string nome2, string personagem2)
         : this()
     {
         NomeJogador1.Text = nome1;
         NomeJogador2.Text = nome2;
+
+        vida1 = VidaInicial;
+        vida2 = VidaInicial;
 
         AtualizarVidaJogador1();
         AtualizarVidaJogador2();
@@ -37,8 +56,8 @@ public partial class PartidaPage : ContentPage
     private CancellationTokenSource ctsDelta1;
     private CancellationTokenSource ctsDelta2;
 
-    private int vida1 = 20;
-    private int vida2 = 20;
+    private int vida1;
+    private int vida2;
 
     private const int VIDA_MAXIMA = 40;
     private const int TEMPO_DELTA_MS = 2500;
@@ -247,7 +266,11 @@ public partial class PartidaPage : ContentPage
             direcaoDelta1 = 1;
             efeitoAtivoDelta1 = false;
 
-            _ = FlashDeCura();
+            if (AnimacoesAtivas)
+            {
+                _ = FlashDeCura();
+            }
+
         }
 
         deltaVida1++;
@@ -269,8 +292,16 @@ public partial class PartidaPage : ContentPage
             direcaoDelta1 = -1;
             efeitoAtivoDelta1 = false;
 
-            _ = ShakeTela();
-            VibrarDano();
+            if (ShakeAtivo)
+            {
+                _ = ShakeTela();
+            }
+
+            if (VibracaoAtiva)
+            {
+                VibrarDano();
+            }
+
         }
 
         deltaVida1++;
@@ -294,7 +325,11 @@ public partial class PartidaPage : ContentPage
             direcaoDelta2 = 1;
             efeitoAtivoDelta2 = false;
 
-            _ = FlashDeCura();
+            if (AnimacoesAtivas)
+            {
+                _ = FlashDeCura();
+            }
+
         }
 
         deltaVida2++;
@@ -316,8 +351,16 @@ public partial class PartidaPage : ContentPage
             direcaoDelta2 = -1;
             efeitoAtivoDelta2 = false;
 
-            _ = ShakeTela();
-            VibrarDano();
+            if (ShakeAtivo)
+            {
+                _ = ShakeTela();
+            }
+
+            if (VibracaoAtiva)
+            {
+                VibrarDano();
+            }
+
         }
 
         deltaVida2++;
@@ -330,8 +373,8 @@ public partial class PartidaPage : ContentPage
 
     private void OnResetVidaClicked(object sender, EventArgs e)
     {
-        vida1 = 20;
-        vida2 = 20;
+        vida1 = VidaInicial;
+        vida2 = VidaInicial;
 
         deltaVida1 = 0;
         deltaVida2 = 0;

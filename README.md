@@ -5,7 +5,7 @@
 ![C#](https://img.shields.io/badge/Language-C%23-blueviolet?logo=c-sharp)
 ![.NET](https://img.shields.io/badge/.NET-Framework%20/%20Core-512BD4?logo=dotnet)
 
-**Éther Counter** é uma ferramenta desktop desenvolvida em C# para auxiliar jogadores de Trading Card Games (TCG). O foco principal é a praticidade e a rapidez no registro de dados durante partidas competitivas ou casais.
+**Éther Counter** é uma ferramenta desenvolvida em C# para auxiliar jogadores de Trading Card Games (TCG). O foco principal é a praticidade e a rapidez no registro de dados durante partidas competitivas ou casais.
 
 ---
 

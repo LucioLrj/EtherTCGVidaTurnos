@@ -17,7 +17,7 @@
 		<Authors>Lucio Laranjeira</Authors>
 		<Company>Ether Card Game</Company>
 		<Product>Ether Counter</Product>
-		<Description>Contador de vida e turnos para Ether Card Game</Description>
+		<Description>Contador de vida para Éther Card Game</Description>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">23.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>

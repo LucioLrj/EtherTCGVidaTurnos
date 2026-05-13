@@ -24,7 +24,7 @@
                     BackgroundColor="#FFDC91"
                     TextColor="Black"/>
 
-            <Button Text="Regras"
+            <Button Text="Glossário e Regras"
                     FontSize="20"
                     Clicked="OnRegrasClicked"
                     FontAttributes="Bold"
@@ -38,6 +38,13 @@
                     BackgroundColor="#FFDC91"
                     TextColor="Black"/>
 
+            <Button Text="Comunidade"
+                    FontSize="20"
+                    Clicked="OnComunidadeClicked"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFDC91"
+                    TextColor="Black"/>
+            
             <Button Text="Sobre"
                     FontSize="20"
                     Clicked="OnSobreClicked"
